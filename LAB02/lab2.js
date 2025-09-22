@@ -15,5 +15,48 @@ prompt.get(["RPS"], (err, res) => {
 
   console.log(`\nTest answer: ${RPS_CPU}\ntest paper: ${RPS_PAPER}\ntest-scissors: ${RPS_SCISSORS}\ntest-rock: ${RPS_ROCK} \n\n`) 
 
+  if(RPS_CPU === RPS_PAPER){ 
+    switch (res.RPS) { 
+      case "rock": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n You Lose!`); 
+        break; 
+      case "paper": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n Tie!`); 
+        break; 
+      case "scissors": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n You Win!`); 
+        break; 
+      default: 
+        console.log("Try again"); 
+    } 
+  } else if(RPS_CPU == RPS_SCISSORS){ 
+    switch (res.RPS) { 
+      case "rock": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n You Lose!`); 
+        break; 
+      case "paper": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n Tie!`); 
+        break; 
+      case "scissors": 
+        console.log(`user: ${res.RPS} \n CPU: Paper \n You Win!`); 
+        break; 
+      default: 
+        console.log("Try again");
+    }
+  } else if(RPS_CPU == RPS_ROCK){ 
+      switch (res.RPS) { 
+        case "rock": 
+          console.log(`user: ${res.RPS} \n CPU: Paper \n You Lose!`); 
+          break; 
+        case "paper": 
+          console.log(`user: ${res.RPS} \n CPU: Paper \n Tie!`); 
+          break; 
+        case "scissors": 
+          console.log(`user: ${res.RPS} \n CPU: Paper \n You Win!`); 
+          break; 
+        default: 
+          console.log("Try again");
+      }
+  }
 })
 
