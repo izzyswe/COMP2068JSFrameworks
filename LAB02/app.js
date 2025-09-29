@@ -6,23 +6,47 @@ function rangeBetween(number, min, max) {
   return number >= min && number <= max;
 }
 
+RPS_GEN = Math.round(Math.random() * 100) / 100  
 
-console.log("Enter Rock, Paper, or Scissors (1, 2, 3)")
+const RPS_RANGER = {
+  rock : rangeBetween(RPS_GEN, 0.00, 0.34),
+  paper: rangeBetween(RPS_GEN, 0.35, 0.67),
+  scissors : rangeBetween(RPS_GEN, 0.68, 1.00),
+}
+
+const RPS_RULES = {
+  rock_: {
+    ags_paper: "Lose",
+    ags_rock: `Tied`,
+    ags_scissors: `Win`,
+  },
+  paper_: {
+    ags_paper: `Tied`,
+    ags_rock: `Win`,
+    ags_scissors: `Lose`,
+  },
+  scissors_: {
+    ags_paper : `Win`,
+    ags_rock : `Lose`,
+    ags_scissors : `Tied`,
+  },
+}
+
+
 prompt.get(["RPS"], (err, res) => {
 
+  if (err) throw err
   const RPS_CPU = Math.round(Math.random() * 100) / 100  
-  const RPS_PAPER = rangeBetween(RPS_CPU, 0.00, 0.34)
-  const RPS_SCISSORS = rangeBetween(RPS_CPU, 0.35, 0.67)
-  const RPS_ROCK = rangeBetween(RPS_CPU, 0.68, 1.00)
+  const RPS_PAPER = "empty"
+  const RPS_SCISSORS = "empty"
+  const RPS_ROCK = "empty"
 
-  // console.log(`\nTest answer: ${RPS_CPU}\ntest paper: ${RPS_PAPER}\ntest-scissors: ${RPS_SCISSORS}\ntest-rock: ${RPS_ROCK} \n\n`) 
+  console.log(`\nTest answer: ${RPS_CPU}\ntest paper: ${RPS_PAPER}\ntest-scissors: ${RPS_SCISSORS}\ntest-rock: ${RPS_ROCK} \n\n`) 
 
   switch (res.RPS) {
     case "rock":
     case "1":
-      RPS_PAPER ? console.log(`user: ${res.RPS} \nCPU: Paper\n You Lose!`) : 
-      RPS_ROCK ? console.log(`user: ${res.RPS} \nCPU: Rock\n Tied!`) :
-      RPS_SCISSORS ? console.log(`user: ${res.RPS} \nCPU: Scissors \n You Win!`) : "error";
+      
       break;
     case "paper":
     case "2":
@@ -40,3 +64,4 @@ prompt.get(["RPS"], (err, res) => {
       console.log("Try again");
   }
 })
+
