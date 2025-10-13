@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust based on content width */
+  }
+}
+@keyframes slide-right {
+  0% {
+    clip-path: polygon(25% 0%, 25% 0, 0 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+html, body {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "geist mono", sans-serif;
+  cursor: url("./../images/circle_cursor_thin.png"), auto;
+  animation-name: slide-right;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out();
+}
+
+.letter {
+  display: inline-block;
+  animation: jump 0.6s ease-in-out infinite;
+  margin: 0 -5px;
+}
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.letter:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.letter:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.letter:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.letter:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.letter:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.letter:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.letter:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.letter:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.letter:nth-child(11) {
+  animation-delay: 0.1s;
+}
+
+.header {
+  margin-top: 8%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Geist Mono", sans-serif;
+}
+.header__nav {
+  height: 8em;
+}
+
+.nav {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  text-align: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  margin: auto;
+}
+.nav__brand {
+  font-size: 18px;
+  font-family: "Ropa Sans", sans-serif;
+}
+.nav__list ul {
+  display: flex;
+  list-style: none;
+  font-family: "Geist", sans-serif;
+}
+.nav__list ul li {
+  border: 1px solid transparent;
+  gap: 10px;
+  padding: 0 11px;
+}
+.nav__list ul li:hover {
+  border: 1px solid black;
+  border-radius: 8px;
+  color: white;
+}
+.nav__list ul li a {
+  cursor: url("./../images/circle_cursor_thin.png"), auto;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: black;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  text-align: justify;
+  flex-direction: column;
+  font-size: 12px;
+  color: #494949;
+}
+.hero__title h2 {
+  font-size: 44px;
+  font-family: "Geist Mono", sans-serif;
+}
+.hero__content {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  text-align: justify;
+  flex-direction: row;
+  gap: 4em;
+}
+.hero__image img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.hero__title p {
+  font-size: 20px;
+}
+
+.Prog-Language {
+  margin-top: 20vh;
+}
+.Prog-Language__content {
+  overflow: hidden;
+}
+
+.test {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+  width: max-content;
+  overflow: scroll;
+  animation: scrollLoop 25s linear infinite;
+}
+.test:hover {
+  animation-play-state: paused;
+}
+.test img {
+  width: 100px;
+  height: 100px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 4rem 0 4rem 0;
+  animation-name: slide-right;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out();
+}
+.projects__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 2rem;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+}
+.projects__card:hover {
+  transform: scale(1.02);
+}
+.projects__card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.projects__card .project__card--text {
+  flex: 1;
+}
+.projects__card .project__card--text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.projects__card .project__card--text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.projects__card {
+  /* For 2nd, 4th, etc. — image on right, text right-aligned */
+}
+.projects__card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.projects__card:nth-child(even) .project__card--text {
+  text-align: right;
+}
+
+.about {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  border: 1px solid black;
+  padding: 3rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+.about__image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about__text {
+  max-width: 600px;
+}
+.about__text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about__text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.about__text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.about__text ul li {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about__image img {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  border: 1px solid black;
+  padding: 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+}
+.contact__info {
+  flex: 1;
+}
+.contact__info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact__info p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.contact__info ul {
+  list-style: none;
+  padding: 0;
+}
+.contact__info ul li {
+  margin-bottom: 0.5rem;
+}
+.contact__info ul a {
+  color: black;
+  text-decoration: underline;
+}
+.contact__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__form .form__group {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form .form__group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.contact__form .form__group input,
+.contact__form .form__group textarea {
+  padding: 0.8rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.contact__form .form__group input:focus,
+.contact__form .form__group textarea:focus {
+  outline: none;
+  border-color: #555;
+}
+.contact__form .btn--primary {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact__form .btn--primary:hover {
+  background-color: #333;
+}
+@media (max-width: 768px) {
+  .contact__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact__info {
+    margin-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
