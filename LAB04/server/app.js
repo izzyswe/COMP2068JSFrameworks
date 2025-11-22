@@ -12,6 +12,11 @@ var mongoose = require('mongoose');
 var configs = require('./configs/globals');
 const project = require('./models/project');
 
+var corsOptions = {
+  origin:"http://localhost:4200",
+  optionsSuccessStatus
+}
+
 var app = express();
 
 // view engine setup
