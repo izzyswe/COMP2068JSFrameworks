@@ -1,0 +1,64 @@
+<div class="auth-page">
+  <div class="auth-page__right">
+    <div class="auth-form">
+      <h1 class="auth-form__title">Happening now</h1>
+      <h2 class="auth-form__heading">Sign in to your account</h2>
+
+      <button class="auth-form__secondary-btn">
+        Sign in with Google
+      </button>
+
+      <button class="auth-form__secondary-btn">
+        Sign in with Apple
+      </button>
+
+      <div class="auth-form__divider">
+        <div class="auth-form__divider-line"></div>
+        <span class="auth-form__divider-text">or</span>
+        <div class="auth-form__divider-line"></div>
+      </div>
+
+      <form id="loginForm">
+        <div class="auth-form__field">
+          <input
+            name="identifier"
+            type="text"
+            class="auth-form__input"
+            placeholder="Email address or username"
+            required
+          />
+        </div>
+
+        <div class="auth-form__field">
+          <input
+            name="accountPassword"
+            type="password"
+            class="auth-form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" class="auth-form__submit">
+          Sign in
+        </button>
+        <p id="loginError" class="errorNote"></p>
+      </form>
+
+      <div class="auth-form__footer">
+        Don't have an account?
+        <a href="/auth/register" class="auth-form__link">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-page__left">
+    <div class="auth-page__logo">
+      <!-- Add your SVG image here -->
+      <img
+        src="/images/logo-white.svg"
+        alt="Logo"
+        class="auth-page__logo-img"
+      />
+    </div>
+  </div>
+</div>

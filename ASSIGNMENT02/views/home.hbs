@@ -1,0 +1,202 @@
+<div class="mainbody">
+  <header class="header">
+    <div class="header__nav">
+      <nav class="navigation">
+        <img
+          src="./images/logo.svg"
+          alt="Twitter Logo"
+          class="navigation__logo"
+        />
+        <button class="navigation__btn">Home</button>
+        <button class="navigation__btn">Messages</button>
+        <button class="navigation__btn">Profile</button>
+        <button class="navigation__btn">... More</button>
+        <button class="navigation__btn navigation__btn--tweet">Tweet</button>
+        <button
+          id="logoutBtn"
+          class="navigation__btn navigation__btn--logout"
+        >Logout</button>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="tweet-card">
+      <div class="tweet-card">
+        <form
+          class="post-tweet-card"
+          action="/home/post"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="post-tweet-card__top">
+            <img
+              src="{{this.twitterProfileImg}}"
+              alt="profile picture"
+              class="post-tweet-card__pfp"
+            />
+            <textarea
+              name="message"
+              rows="5"
+              cols="50"
+              placeholder="What's Happening?"
+            ></textarea>
+          </div>
+
+          <div id="imagePreview" class="image-preview">
+            <img id="previewImg" class="image-preview__img" alt="Preview" />
+            <button id="removeImageBtn" class="image-preview__remove">×</button>
+          </div>
+
+          <div class="post-tweet-card__btns">
+            <div>
+              <button id="imageUploadBtn">
+                <img
+                  src="https://www.svgrepo.com/show/458748/img-box.svg"
+                  alt="img"
+                />
+              </button>
+              <input
+                type="file"
+                id="imageFileInput"
+                name="tweetPostImg"
+                accept="image/*"
+                style="display:none;"
+              />
+              <button>
+                <img
+                  src="https://www.svgrepo.com/show/355820/gif.svg"
+                  alt="gif"
+                />
+              </button>
+              <button>
+                <img
+                  src="https://www.svgrepo.com/show/521644/emoji-smile.svg"
+                  alt="emotes"
+                />
+              </button>
+              <button>
+                <img
+                  src="https://www.svgrepo.com/show/521539/calendar-time.svg"
+                  alt="calendar"
+                />
+              </button>
+              <button>
+                <img
+                  src="https://www.svgrepo.com/show/532540/location-pin-alt-1.svg"
+                  alt="location"
+                />
+              </button>
+            </div>
+            <button type="submit" class="post-tweet-card__btns--post">
+              post
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="twitter-postings">
+      {{#each twitterPostings}}
+        <article class="twitter-postings__card">
+          <header class="twitter-postings__header">
+            <img
+              src="{{this.twitterProfileImg}}"
+              alt="pfp"
+              class="twitter-postings__pfp"
+            />
+            <h2
+              class="twitter-postings__username"
+            >@{{this.twitterUsername}}</h2>
+          </header>
+
+          <div class="twitter-postings__message">
+            <p>{{this.tweetMessage}}</p>
+          </div>
+          {{#if this.tweetPostImg}}
+            <img
+              src="{{this.tweetPostImg}}"
+              alt="tweet image"
+              class="twitter-postings__image"
+            />
+          {{/if}}
+
+          <footer class="twitter-postings__actions">
+            <button class="twitter-postings__button">
+              <img src="https://tinyurl.com/yck7bxvr" alt="reply" />
+            </button>
+            <button class="twitter-postings__button">
+              <img src="https://tinyurl.com/236kk9tp" alt="retweet" />
+            </button>
+            <button class="twitter-postings__button like-btn" data-id="{{id}}">
+              <img src="https://tinyurl.com/ye26vn6d" alt="like" />
+            </button>
+            <span>{{tweetLikes.length}}</span>
+            <button class="twitter-postings__button">
+              <img src="https://tinyurl.com/3dhpe4pw" alt="share" />
+            </button>
+          </footer>
+        </article>
+      {{/each}}
+    </section>
+  </main>
+  <aside class="aside">
+    <section class="aside__trends">
+      <h3>What's happening</h3>
+      <article class="aside__trend-item">
+        <p class="aside__trend-category">Trending in Canada</p>
+        <h4 class="aside__trend-title">#TechNews</h4>
+        <p class="aside__trend-tweets">15.2K posts</p>
+      </article>
+      <article class="aside__trend-item">
+        <p class="aside__trend-category">Sports · Trending</p>
+        <h4 class="aside__trend-title">NHL Playoffs</h4>
+        <p class="aside__trend-tweets">42.8K posts</p>
+      </article>
+      <article class="aside__trend-item">
+        <p class="aside__trend-category">Entertainment · Trending</p>
+        <h4 class="aside__trend-title">New Album Release</h4>
+        <p class="aside__trend-tweets">28.1K posts</p>
+      </article>
+    </section>
+
+    <section class="aside__who-to-follow">
+      <h3>Who to follow</h3>
+      <article class="aside__user">
+        <img
+          src="https://i.pravatar.cc/150?img=12"
+          alt="user"
+          class="aside__user-img"
+        />
+        <div class="aside__user-info">
+          <p class="aside__user-name">Tech Daily</p>
+          <p class="aside__user-handle">@techdaily</p>
+        </div>
+        <button class="aside__follow-btn">Follow</button>
+      </article>
+      <article class="aside__user">
+        <img
+          src="https://i.pravatar.cc/150?img=25"
+          alt="user"
+          class="aside__user-img"
+        />
+        <div class="aside__user-info">
+          <p class="aside__user-name">News Hub</p>
+          <p class="aside__user-handle">@newshub</p>
+        </div>
+        <button class="aside__follow-btn">Follow</button>
+      </article>
+      <article class="aside__user">
+        <img
+          src="https://i.pravatar.cc/150?img=33"
+          alt="user"
+          class="aside__user-img"
+        />
+        <div class="aside__user-info">
+          <p class="aside__user-name">Design Studio</p>
+          <p class="aside__user-handle">@designstudio</p>
+        </div>
+        <button class="aside__follow-btn">Follow</button>
+      </article>
+    </section>
+  </aside>
+</div>

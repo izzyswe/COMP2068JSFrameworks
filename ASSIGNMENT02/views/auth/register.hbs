@@ -1,0 +1,95 @@
+<div class="auth-page">
+  <div class="auth-page__left">
+    <div class="auth-page__logo">
+      <!-- Add your SVG image here -->
+      <img
+        src="/images/logo-white.svg"
+        alt="Logo"
+        class="auth-page__logo-img"
+      />
+    </div>
+  </div>
+
+  <div class="auth-page__right">
+    <div class="auth-form">
+      <h1 class="auth-form__title">Happening now</h1>
+      <h2 class="auth-form__heading">Join today.</h2>
+
+      <button class="auth-form__secondary-btn">
+        Sign up with Google
+      </button>
+
+      <button class="auth-form__secondary-btn">
+        Sign up with Apple
+      </button>
+
+      <div class="auth-form__divider">
+        <div class="auth-form__divider-line"></div>
+        <span class="auth-form__divider-text">or</span>
+        <div class="auth-form__divider-line"></div>
+      </div>
+
+      <form id="registerForm" action="/auth/register">
+        <p id="error" class="errorNote"></p>
+        <div class="auth-form__field">
+          <input
+            name="accountUsername"
+            type="text"
+            class="auth-form__input"
+            placeholder="Username"
+            required
+          />
+        </div>
+
+        <div class="auth-form__field">
+          <input
+            name="accountEmail"
+            type="email"
+            class="auth-form__input"
+            placeholder="Email address"
+            required
+          />
+        </div>
+
+        <div class="auth-form__field">
+          <input
+            name="accountPassword"
+            type="password"
+            class="auth-form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="auth-form__field">
+          <input
+            name="confirm"
+            type="password"
+            class="auth-form__input"
+            placeholder="Retype password"
+            required
+          />
+        </div>
+
+        <div class="auth-form__field">
+          <input
+            name="accountProfilePicture"
+            type="file"
+            class="auth-form__input"
+            accept="image/*"
+          />
+          <label class="auth-form__file-label">Profile picture (optional)</label>
+        </div>
+
+        <button type="submit" class="auth-form__submit">
+          Create account
+        </button>
+      </form>
+
+      <div class="auth-form__footer">
+        Already have an account?
+        <a href="/auth/login" class="auth-form__link">Sign in</a>
+      </div>
+    </div>
+  </div>
+</div>
