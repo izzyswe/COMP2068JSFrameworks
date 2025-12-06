@@ -19,25 +19,25 @@ You have the ability for the following things
         but it became too time consuming to learn in depth the ins and out and implementing it
 
 # twitter ui inspiration
- x.com 
- (FIGMA)[https://www.figma.com/design/7UYZbBvqMepkxsDGdnjoYF/UI-Twitter-Web--Community-?node-id=0-1&p=f&t=Ool6zFRGAuvRgO0n-0]
+ [X Formerly Twitter](x.com) <br> 
+ [FIGMA](https://www.figma.com/design/7UYZbBvqMepkxsDGdnjoYF/UI-Twitter-Web--Community-?node-id=0-1&p=f&t=Ool6zFRGAuvRgO0n-0)<br>
 
 # References I used to get this done
 
-[YOUTUBE - Passport - Web Dev simplified](https://www.youtube.com/watch?v=-RCnNyD0L-s&t=1171s)
-[YOUTUBE - Bcrypt - Sam Meech-Ward](https://youtu.be/AzA_LTDoFqY?si=UVgKoyBVm2ZIdiVK)
-[YOUTUBE - Bcrypt Understanding Hashing/salting - Coding with Chaim](https://youtu.be/ro1WmoP4CZs?si=9xEfYuP7RsGK5FmE)
-[YOUTUBE - CRUD - Web Dev simplified](https://youtu.be/fgTGADljAeg?si=3eneVNPOE4cPT4KU)
-[YOUTUBE - SIMPLE CRUD - FreeCodeCamp](https://youtu.be/_7UQPve99r4?si=kMUO-MTWD5Y0vdYF)
-[YOUTUBE - Uploading using express & Multer](https://www.youtube.com/watch?v=i8yxx6V9UdM)
-[YOUTUBE - multer](https://www.youtube.com/watch?v=wIOpe8S2Mk8)
-[YOUTUBE - LOGIN & REGISTRATION](https://www.youtube.com/watch?v=Ud5xKCYQTjM)
+[YOUTUBE - Passport - Web Dev simplified](https://www.youtube.com/watch?v=-RCnNyD0L-s&t=1171s)<br>
+[YOUTUBE - Bcrypt - Sam Meech-Ward](https://youtu.be/AzA_LTDoFqY?si=UVgKoyBVm2ZIdiVK)<br>
+[YOUTUBE - Bcrypt Understanding Hashing/salting - Coding with Chaim](https://youtu.be/ro1WmoP4CZs?si=9xEfYuP7RsGK5FmE)<br>
+[YOUTUBE - CRUD - Web Dev simplified](https://youtu.be/fgTGADljAeg?si=3eneVNPOE4cPT4KU)<br>
+[YOUTUBE - SIMPLE CRUD - FreeCodeCamp](https://youtu.be/_7UQPve99r4?si=kMUO-MTWD5Y0vdYF)<br>
+[YOUTUBE - Uploading using express & Multer](https://www.youtube.com/watch?v=i8yxx6V9UdM)<br>
+[YOUTUBE - multer](https://www.youtube.com/watch?v=wIOpe8S2Mk8)<br>
+[YOUTUBE - LOGIN & REGISTRATION](https://www.youtube.com/watch?v=Ud5xKCYQTjM)<br>
 
 ### NPM PACKAGES
-[multer](https://www.npmjs.com/package/multer)
-[express](https://www.npmjs.com/package/express)
-[passport](https://www.npmjs.com/package/passport)
-[passport-local](https://www.npmjs.com/package/passport-local)
-[passport-local documentation](https://www.passportjs.org/packages/passport-local/)
-[handlebar expressions](https://handlebarsjs.com/guide/expressions.html)
+[multer](https://www.npmjs.com/package/multer)<br>
+[express](https://www.npmjs.com/package/express)<br>
+[passport](https://www.npmjs.com/package/passport)<br>
+[passport-local](https://www.npmjs.com/package/passport-local)<br>
+[passport-local documentation](https://www.passportjs.org/packages/passport-local/)<br>
+[handlebar expressions](https://handlebarsjs.com/guide/expressions.html)<br>
 
