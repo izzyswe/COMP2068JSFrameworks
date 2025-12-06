@@ -20,17 +20,11 @@ var authRouter = require('./routes/auth')
 var app = express();
 
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING,{
-  serverSelectionTimeoutMS: 5000
-})
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
 .then(() => {
   console.log("Connected to MongoDB.")
-  console.log("Database host:", mongoose.connection.host)
 }).catch((err) => {
-  console.log("MongoDB Connection Failed")
-  console.error("Error name:", err.name)
-  console.error("Error message:", err.message)
-  if (err.reason) console.error("Reason:", err.reason)
+  console.log("MongoDB Connection Failed \n info: " + err)
 })
 
 // view engine setup
